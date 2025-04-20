@@ -1,0 +1,108 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "NorseBold";
+  src: url("./assets/Norse-Bold.otf") format("opentype");
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Disable scroll entirely */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+  font-family: "NorseBold", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Reset Styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Layout Styles */
+.left-section,
+.right-section {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left-section {
+  flex: 1;
+  position: relative;
+  width: 40%;
+}
+
+.left-section img {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.right-section {
+  width: 60%;
+}
+
+/* Logo Section */
+.logo-section {
+  position: absolute;
+  top: 20%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark with 60% opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 5rem;
+  width: 100%;
+  padding: 20px;
+  height: 20%;
+  color: #fff;
+}
+
+.logo-section img {
+  width: 20%;
+  max-width: 100%;
+}
