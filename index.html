@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up Form</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
     </head>
 
     <body>
@@ -15,9 +16,66 @@
                 <p>ODIN</p>
             </div>
             <img src="./assets/background_img.jpg" alt="background image">
+            <p class="credit">Photo by <a
+                    href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Halie
+                    West</a> on <a
+                    href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a>
+            </p>
         </div>
         <div class="right-section">
+            <div class="first-section">
+                <div class="text">
+                    <div>
+                        <p>This is not a real online service!
+                            You know you need something like this in your life to help you realize your deepest dreams.
+                        </p>
+                        <p>Sign up now to get started.</p>
+                    </div>
+                    <p>You know you want to.</p>
+                </div>
+            </div>
+            <div class="second-section">
+                <p class="form-header">Let's do this!</p>
+                <form action="#" method="post" id="signup-form">
+                    <div class="form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="first_name">FIRST NAME</label>
+                                <input type="text" name="first_name" id="first_name" required minlength="2">
+                            </div>
+                            <div class="form-field">
+                                <label for="last_name">LAST NAME</label>
+                                <input type="text" name="last_name" id="last_name" required minlength="2">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="email">EMAIL</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">PHONE NUMBER</label>
+                                <input type="tel" name="phone" id="phone" pattern="[0-9]{11}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="password" id="password" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="confirm_password">CONFIRM PASSWORD</label>
+                                <input type="password" name="confirm_password" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
 
+                </form>
+            </div>
+            <div class="third-section">
+                <button type="submit" id="submit-btn">Create Account</button>
+                <p>Already have an account? <span>Login</span></p>
+            </div>
         </div>
     </body>
 

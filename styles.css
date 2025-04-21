@@ -24,9 +24,9 @@ body {
   line-height: 1.5;
   background-color: #fff;
   color: #000;
-  font-family: "NorseBold", sans-serif;
   display: flex;
   flex-direction: row;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Reset Styles */
@@ -71,9 +71,8 @@ select {
 }
 
 .left-section {
-  flex: 1;
   position: relative;
-  width: 40%;
+  flex: 1;
 }
 
 .left-section img {
@@ -84,6 +83,8 @@ select {
 
 .right-section {
   width: 60%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Logo Section */
@@ -100,9 +101,116 @@ select {
   padding: 20px;
   height: 20%;
   color: #fff;
+  font-family: "NorseBold", sans-serif;
 }
 
 .logo-section img {
   width: 20%;
   max-width: 100%;
+}
+
+.credit {
+  position: absolute;
+  color: #fff;
+  font-size: 15px;
+  top: 97%;
+  left: 30%;
+}
+
+a {
+  color: #fff;
+}
+
+.first-section {
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: rgb(243, 243, 243);
+  height: 35%;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.first-section .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+.second-section {
+  height: 30%;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  font-size: 1.4em;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 0.8em;
+}
+
+input {
+  width: 18rem;
+  height: 1.8em;
+  border: solid 1px #e5e7eb;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+input:focus {
+  border: solid 1px rgb(0, 157, 255);
+  outline: none;
+}
+
+input[type="password"]:invalid {
+  border-color: red;
+}
+
+.third-section {
+  height: 35%;
+  background-color: rgb(243, 243, 243);
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+
+button {
+  width: 20%;
+  padding: 10px;
+  background-color: rgba(89, 108, 73, 255);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+span {
+  color: rgba(89, 108, 73, 255);
 }
