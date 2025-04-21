@@ -13,13 +13,10 @@
 html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  height: 100%;
   margin: 0;
-  overflow: hidden; /* Disable scroll entirely */
 }
 
 body {
-  height: 100%;
   margin: 0;
   line-height: 1.5;
   background-color: #fff;
@@ -67,7 +64,6 @@ select {
 .left-section,
 .right-section {
   height: 100vh;
-  overflow: hidden;
 }
 
 .left-section {
@@ -125,7 +121,6 @@ a {
   font-weight: bold;
   font-size: 1.2em;
   background-color: rgb(243, 243, 243);
-  height: 35%;
   padding: 20px 50px;
   display: flex;
   flex-direction: column;
@@ -141,7 +136,6 @@ a {
 }
 
 .second-section {
-  height: 30%;
   padding: 20px 50px;
   display: flex;
   flex-direction: column;
@@ -169,14 +163,13 @@ label {
 }
 
 input {
-  width: 18rem;
-  height: 1.8em;
+  width: 100%;
+  max-width: 18rem;
+  height: 2em;
   border: solid 1px #e5e7eb;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  padding: 0.5em;
+  box-sizing: border-box;
 }
 
 input:focus {
@@ -189,12 +182,17 @@ input[type="password"]:invalid {
 }
 
 .third-section {
-  height: 35%;
   background-color: rgb(243, 243, 243);
   padding: 30px 50px;
   display: flex;
   flex-direction: column;
   gap: 10%;
+}
+
+.first-section,
+.second-section,
+.third-section {
+  flex: 1; /* or flex-grow based on importance */
 }
 
 button {
@@ -213,4 +211,35 @@ button {
 
 span {
   color: rgba(89, 108, 73, 255);
+}
+
+@media (max-width: 992px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left-section {
+    height: auto;
+  }
+
+  .right-section {
+    width: 100%;
+  }
+
+  .first-section .text {
+    width: 100%;
+  }
+
+  .second-section {
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
 }
